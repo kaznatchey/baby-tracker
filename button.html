@@ -6,19 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Button</title>
 
-    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="./button.css">
 
 </head>
 <body>
     <div class="container">
-
-        <button class="button">
+        
+        <button class="button" onclick="displayDate()" >
            Kick
 
-
-
-
         </button>
+     
+        <!-- <script>
+            function displayDate() {
+              document.getElementById("B").innerHTML = Date();
+            }
+        </script> -->
+
+        <p id="B"></p>
     
+        <!-- <button onclick="displayDate()">The time is?</button>              -->
+        <script src = "./button.js"></script>
 </body>
 </html>
