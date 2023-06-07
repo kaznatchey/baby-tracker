@@ -10,22 +10,33 @@
 
 </head>
 <body>
+           
+    <div class="container">
+        <form action="#" method="post" enctype="multipart/form-data">
+            <div>
+                <input type="text" name="name" placeholder="Name" id="name">
+            </div>
+            <br>
+            <div>
+                <input type="text" name="time" placeholder="Date & time" id="time">
+            </div>
+            <br>
+            <input type="submit" name="submit" value="Submit">
+        </form>
+    </div>
+
     <div class="container">
         
-        <button class="button" onclick="displayDate()" >
-           Kick
-
-        </button>
-     
-        <!-- <script>
-            function displayDate() {
-              document.getElementById("B").innerHTML = Date();
-            }
-        </script> -->
-
+        <button class = "button" id = "kick" >Kick</button>
+        
+    </div>    
+    <div class="p">
         <p id="B"></p>
-    
-        <!-- <button onclick="displayDate()">The time is?</button>              -->
+    </div>
+    <div>
         <script src = "./button.js"></script>
+
+    </div>
+       
 </body>
 </html>
