@@ -13,6 +13,8 @@ $txt = $_POST["name"];
 fwrite($myfile, $txt);
 $txt = $_POST["email"];
 fwrite($myfile, $txt);
+$txt = time();
+fwrite($myfile, $txt);
 fclose($myfile);
 echo "done";
 ?>
