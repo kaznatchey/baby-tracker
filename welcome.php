@@ -1,19 +1,11 @@
 <html>
 <body>
 
-Welcome <?php echo $_POST["name"]; ?><br>
-Your email address is: <?php echo $_POST["email"]; ?>
+Kick time was recorded <?php echo $_POST["kicktime"]; ?>
 
 <?php
-/*
-echo readfile("newfile.txt");
-*/
 $myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
-$txt = $_POST["name"];
-fwrite($myfile, $txt);
-$txt = $_POST["email"];
-fwrite($myfile, $txt);
-$txt = time();
+$txt = $_POST["kicktime"];
 fwrite($myfile, $txt);
 fclose($myfile);
 echo "done";
