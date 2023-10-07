@@ -7,35 +7,22 @@
     <title>Button</title>
 
     <link rel="stylesheet" href="./button.css">
+    <script src="button.js" defer></script>
 
 </head>
 <body>
            
-    <div class="form">
+    <div class="form, container">
         <form action="welcome.php" method="post">
-            Name: <input type="text" name="name">
-            <br>
-            E-mail: <input id="B" type="text" name="email">
-            <br>
-<!--             <div class="p">
-                <p id="B"></p>
-            </div> -->
-            <br>
-            <input type="submit">
-        
+            <input type="datetime-local" id="kick" name="kicktime">
+            <input class = "button" type="submit" value="Kick">
         </form>
     </div>
 
-    <div class="container">
-        
-        <button class = "button" id = "kick" >Kick</button>
-        
-    </div> 
-    
-    <div>
+    <!-- <div>
         <script src = "./button.js"></script>
 
-    </div>
+    </div> -->
        
 </body>
 </html>
