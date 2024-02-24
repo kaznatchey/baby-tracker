@@ -22,6 +22,25 @@ chmod 777 welcome.php
 return_value = os.system(install_httpd)
 print(return_value)
 
+php_config = """
+# PHP 7 specific configuration
+<IfModule php7_module>
+    AddType application/x-httpd-php .php
+    AddType application/x-httpd-php-source .phps
+    <IfModule dir_module>
+        DirectoryIndex index.html index.php
+    </IfModule>
+</IfModule>
+"""
+
 configFile = open("/etc/httpd/conf/httpd.conf", "a")  # append mode
-configFile.write("# PHP 7 specific configuration \n")
+configFile.write(php_config)
+# configFile.write("# PHP 7 specific configuration \n")
+# configFile.write("<IfModule php7_module> \n")
+# configFile.write("    AddType application/x-httpd-php .php \n")
+# configFile.write("    AddType application/x-httpd-php-source .phps \n")
+# configFile.write("    <IfModule dir_module> \n")
+# configFile.write("        DirectoryIndex index.html index.php \n")
+# configFile.write("    </IfModule> \n")
+# configFile.write("</IfModule> \n")
 configFile.close()
