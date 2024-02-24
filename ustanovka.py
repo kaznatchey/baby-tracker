@@ -1,5 +1,5 @@
 import os
-  
+
 install_httpd = """
 sudo yes y | sudo yum install httpd
 sudo systemctl start httpd
@@ -22,6 +22,6 @@ chmod 777 welcome.php
 return_value = os.system(install_httpd)
 print(return_value)
 
-# os.system("yes y | yum install httpd")
-
-# os.system("yes y | yum install mysql")
+configFile = open("/etc/httpd/conf/httpd.conf", "a")  # append mode
+configFile.write("# PHP 7 specific configuration \n")
+configFile.close()
