@@ -6,12 +6,14 @@ sudo systemctl start httpd
 sudo systemctl enable httpd.service
 sudo firewall-cmd --add-service=http --permanent
 sudo firewall-cmd --reload
-systemctl status httpd
+echo 'finished firewall'
 sudo chmod -R 775 /var/www/html/
 sudo chown -R cloud_user:cloud_user /var/www/html/
 sudo chown -R cloud_user:cloud_user /var/www/
+echo 'finished chown -R cloud_user:cloud_user /var/www/'
 ls -al /var/www/html/
 sudo yes y | sudo yum install php
+echo 'installed php'
 chcon -R -t httpd_sys_content_t /var/www/html
 chcon -R -t httpd_sys_rw_content_t /var/www/html
 chmod 777 newfile.txt
